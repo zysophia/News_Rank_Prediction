@@ -1,0 +1,174 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+
+\begin{document}
+
+\title{Project Proposal for Data1030}
+\author{Yue Zhuang}
+
+\maketitle
+
+\begin{abstract}
+In this project, we would like to dig into the popularity of news in multiple 
+social media platforms. With the timing of publishment an important feature 
+that affects the popularity of news, we will develop a real time predicting 
+system for certain piece of news. The result of popularity prediction will 
+be helpful for the existing news recommend system.
+\end{abstract}
+
+\section{Problem description}
+In this section, we will describe the problem we want to solve.
+\subsection{traget variables}
+The target variable of our project would be the popularity rate of a certain 
+piece of news.
+\subsection{problem type}
+The problem would be regression since we will predict the popularity rate of news.
+\subsection{interest \& importance}
+Unlike most regression problems which has well organized features as the input 
+of a ML model, the popularity rate of a piece of news is effected by both the 
+content of the news and the timing of publishment. We will need to dig into the 
+time series data to investigate the popularity trend of a certain topic. The way 
+we select features for the trend model will greatly affect the performance of 
+our prediction model, bringing challenge to the problem.
+\\\\
+The prediction of popularity rate of news can be of significant importance for the 
+recommend systems. Social media platforms will be able to push the most popular 
+piece of news to consumers by introducing the real-time prediction model to their 
+existing recommend system. 
+
+
+\section{Dataset description}
+In this section, we will describe the dataset -- News Popularity in Multiple 
+Social Media Platforms Data Set. This is a large data set of news items and 
+their respective social feedback on multiple platforms, including: Facebook, 
+Google+ and LinkedIn. The collected data relates to a period of 8 months, 
+between November 2015 and July 2016, accounting for about 100,000 news items 
+on four different topics: economy, microsoft, obama and palestine.
+
+\subsection{dataset size}
+We have multiple csv files storing data in two distinct formats.
+
+\subsubsection{news final sheet}
+In this csv file, each row represents a certain piece of news, with total 93240 
+rows.\\\\ The columns includes 11 features: its IDLink, title, headline, source, 
+topic, publishdate, sentimenttitle, sentimentheadline and the final popularity 
+on different social media platforms (Facebook, GooglePlus, LinkedIn).
+
+\subsubsection{times series sheet}
+In these csv files, each file includes data for the time series popularity rate 
+for news on a certain social media platform and with certain topics.\\\\
+Each row represents a certain piece of news, with approximatel 3000 rows in each 
+csv file. The columns are the popularity rates in each time slice, with a total of 
+144 slices. The time series starts from the time of publishment and each time slice 
+has a range of 20 minutes.
+
+\subsection{documentation}
+
+\subsubsection{news final sheet}
+\begin{table}[h!]
+    \begin{center}
+      \caption{News Final Sheet}
+      \label{tab:table1}
+      \begin{tabular}{l|c|r} 
+        \textbf{Column Name} & \textbf{Type} & \textbf{Brief Description}\\
+        \hline
+        IDLink & numerical & Unique identifier of news items\\
+        Title & string & Title of the news item according to the official media sources\\
+        HeadLine & string & Headline of the news item according to the official media sources\\
+        Source & categorical & Original news outlet that published the news item\\
+        Topic & categorical & Query topic used to obtain the items in the official media sources\\
+        Publishdate & numerical & Date and time of the news items' publication\\
+        SentimentTitle & numerical & Sentiment score of the text in the news items' title\\
+        SentimentHeadline & numerical & Sentiment score of the text in the news items' headline\\
+        FaceBook & numerical & Final value of the popularity according to Facebook\\
+        GooglePlus & numerical & Final value of the popularity according to Google+\\
+        LinkedIn & numerical & Final value of the popularity according to LinkedIn\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+
+\subsubsection{times series sheet}
+\begin{table}[h!]
+    \begin{center}
+      \caption{Time Series Sheet}
+      \label{tab:table2}
+      \begin{tabular}{l|c|r} 
+        \textbf{Column Name} & \textbf{Type} & \textbf{Brief Description}\\
+        \hline
+        IDLink & numerical & Unique identifier of news items\\
+        TS1 & numerical & Level of popularity in time slice 1 (0-20 minutes upon publication)\\
+        TS2 & numerical & Level of popularity in time slice 2 (20-40 minutes upon publication)\\
+        ... & ... & ...\\
+        TS144 & numerical & Final level of popularity after 2 days upon publication\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+\subsection{public projects}
+In this section, we will give short descriptions for 2 public projects where 
+the data has been used, and talk about how the features were used.
+\subsubsection{public project 1}
+\textbf{Multi Source Social Feedback of Online News Feeds}\\
+Author: Nuno Moniz, Luis Torgo\\
+Date: Jan 2018\\
+\\
+In this project, the authors provided a smoothed approximation of the amount of 
+news per day, for each topic from both Google News and Yahoo. They also 
+concerns the evolution of news items’ popularity in the various social media sources, 
+finding that news items obtain close to half of their final popularity in a 
+short amount of time. The authors used R to analyze the evolution of available 
+information in each time slice for all topics and social media sources, coming to 
+statistical results.\\
+
+\subsubsection{public project 2}
+\textbf{The Utility Problem of Web Content Popularity Prediction}\\
+Author: Nuno Moniz, Luis Torgo\\
+Date: May 2018\\
+\\
+In this project, the authors provided a study of numerical web content popularity 
+prediction approaches and their ability to forecast and rank highly popular web content.
+Kernel regression and k nearest neighbour methods are used to timely predict the popularity 
+of a certain piece of news and to provide a ranking for those news. The authors did not 
+release which features they have chosen for the model.\\
+
+
+\section{Data Preprocessing}
+
+\begin{table}[h!]
+    \begin{center}
+      \caption{Data Preprocessing for News Final Sheet}
+      \label{tab:table3}
+      \begin{tabular}{l|c|c|c} 
+        \textbf{Column (Feature) Name} & \textbf{Type} & \textbf{methods} & \textbf{reasoning}\\
+        \hline
+        Source & categorical & OneHotEncoder & categorical data\\
+        Topic & categorical & OneHotEncoder & categorical data\\
+        Publishdate & numerical &  & used later to get access to another sheet \\
+        SentimentTitle & numerical & StandardScaler & continuous data without exact range\\
+        SentimentHeadline & numerical & StandardScaler & continuous data without exact range\\
+      \end{tabular}
+    \end{center}
+\end{table}
+
+
+  \begin{table}[h!]
+    \begin{center}
+      \caption{Data Preprocessing for News Final Sheet}
+      \label{tab:table3}
+      \begin{tabular}{l|c|c|c} 
+        \textbf{Column (Feature) Name} & \textbf{Type} & \textbf{methods} & \textbf{reasoning}\\
+        \hline
+        TSi & numerical & Devide by the final popularity TS144 & get percentage data\\
+        
+        TS144 & numerical & / & final level of popularity\\
+      
+      \end{tabular}
+    \end{center}
+\end{table}
+
+Now we have 5 features for sheet1 and 144 features for sheet2. We may make extra progress to get 
+those two sheets connected, providing additional convincing features for our model.
+\end{document}
