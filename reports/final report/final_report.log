@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 DEC 2019 08:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 DEC 2019 08:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -115,7 +115,11 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@width=\dimen114
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux)
+) (/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+
+Package natbib Warning: Citation `ref5' multiply defined.
+
+)
 \openout1 = `final_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -327,20 +331,29 @@ File: ../../figures/"svr_perm_imp".png Graphic file (type png)
 <use ../../figures/"svr_perm_imp".png>
 Package pdftex.def Info: ../../figures/"svr_perm_imp".png  used on input line 287.
 (pdftex.def)             Requested size: 289.58116pt x 175.15395pt.
- [11 <../../figures/svr_perm_imp.png>] [12] (/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux) ) 
+ [11 <../../figures/svr_perm_imp.png>]
+
+Package natbib Warning: There were multiply defined citations.
+
+[12] (/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) ) 
 Here is how much of TeX's memory you used:
- 2747 strings out of 492616
- 42632 string characters out of 6129482
- 112699 words of memory out of 5000000
- 6611 multiletter control sequences out of 15000+600000
- 8578 words of font info for 31 fonts, out of 8000000 for 9000
+ 2749 strings out of 492616
+ 42655 string characters out of 6129482
+ 112749 words of memory out of 5000000
+ 6612 multiletter control sequences out of 15000+600000
+ 8746 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,27p,587b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.pdf" (12 pages, 1306525 bytes).
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "/Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.pdf" (12 pages, 1313660 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
