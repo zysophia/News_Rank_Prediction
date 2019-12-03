@@ -1,0 +1,160 @@
+PWD /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report
+INPUT /usr/local/texlive/2019/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.tex
+OUTPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.log
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfloat/subfloat.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/subfloat/subfloat.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+OUTPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+OUTPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.pdf
+INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/count of news by publish time.png
+INPUT ../../figures/count of news by publish time.png
+INPUT ../../figures/count of news by publish time.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/count of news with popularity larger than 100 by publish time.png
+INPUT ../../figures/count of news with popularity larger than 100 by publish time.png
+INPUT ../../figures/count of news with popularity larger than 100 by publish time.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/box plot for popularity of hot news.png
+INPUT ../../figures/box plot for popularity of hot news.png
+INPUT ../../figures/box plot for popularity of hot news.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/violin plot of popularity rate.png
+INPUT ../../figures/violin plot of popularity rate.png
+INPUT ../../figures/violin plot of popularity rate.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/Facebook_Economy violin plot of popularity .png
+INPUT ../../figures/Facebook_Economy violin plot of popularity .png
+INPUT ../../figures/Facebook_Economy violin plot of popularity .png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/Facebook_Obama violin plot of popularity rate.png
+INPUT ../../figures/Facebook_Obama violin plot of popularity rate.png
+INPUT ../../figures/Facebook_Obama violin plot of popularity rate.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/Facebook_Microsoft violin plot of popularity .png
+INPUT ../../figures/Facebook_Microsoft violin plot of popularity .png
+INPUT ../../figures/Facebook_Microsoft violin plot of popularity .png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/Facebook_Palestine violin plot of popularity .png
+INPUT ../../figures/Facebook_Palestine violin plot of popularity .png
+INPUT ../../figures/Facebook_Palestine violin plot of popularity .png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/popu distrib 20m.png
+INPUT ../../figures/popu distrib 20m.png
+INPUT ../../figures/popu distrib 20m.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/Popularity distrib 1h.png
+INPUT ../../figures/Popularity distrib 1h.png
+INPUT ../../figures/Popularity distrib 1h.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/rforest_param.png
+INPUT ../../figures/rforest_param.png
+INPUT ../../figures/rforest_param.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/rf_rs_unc.png
+INPUT ../../figures/rf_rs_unc.png
+INPUT ../../figures/rf_rs_unc.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/rf_perm_imp.png
+INPUT ../../figures/rf_perm_imp.png
+INPUT ../../figures/rf_perm_imp.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/gbr_param.png
+INPUT ../../figures/gbr_param.png
+INPUT ../../figures/gbr_param.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/gbr_rs_unc.png
+INPUT ../../figures/gbr_rs_unc.png
+INPUT ../../figures/gbr_rs_unc.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/gbr_perm_imp.png
+INPUT ../../figures/gbr_perm_imp.png
+INPUT ../../figures/gbr_perm_imp.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/svr_param.png
+INPUT ../../figures/svr_param.png
+INPUT ../../figures/svr_param.png
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/svr_perm_imp.png
+INPUT ../../figures/svr_perm_imp.png
+INPUT ../../figures/svr_perm_imp.png
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.aux
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
