@@ -90,8 +90,14 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/nf_sheet.png
+INPUT ../../figures/nf_sheet.png
 OUTPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/final_report.pdf
+INPUT ../../figures/nf_sheet.png
 INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/ts_sheet.png
+INPUT ../../figures/ts_sheet.png
+INPUT ../../figures/ts_sheet.png
 INPUT /Users/zysophia/Desktop/News_Rank_Prediction/reports/final report/../../figures/count of news by publish time.png
 INPUT ../../figures/count of news by publish time.png
 INPUT ../../figures/count of news by publish time.png

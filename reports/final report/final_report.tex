@@ -32,9 +32,8 @@ Git:\url{https://github.com/zysophia/News_Rank_Prediction}\\\\}
 \maketitle
 
 \section{Introduction}
-In this section, we will give a brief description of the problem and the dataset we would work on.
 \subsection{Problem Description}
-In this project, we would like to dig into the popularity of news on the Facebook News platform. With the timing of publishment an important feature that affects the popularity of news, we will develop a real time predicting system for the popularity of certain piece of news.\par
+In this project, we dig into the popularity of news on the Facebook News platform. With the timing of publishment an important feature that affects the popularity of news, we will develop a real time predicting system for the popularity of certain piece of news.\par
 The target variable of our project would be the popularity rate in the near future (20 minutes) of a certain piece of news.\par
 The problem is regression since we will predict the popularity rate of news, which is a continuous variable.\par
 The prediction of popularity rate of news can be of significant importance for the recommend systems. Social media platforms will be able to push the most popular piece of news to consumers by introducing the real-time prediction model to their existing recommend system.
@@ -48,15 +47,31 @@ In this section, we will describe the dataset – News Popularity in Multiple So
 
 \begin{itemize}
 \item \textbf{news final sheet}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.45]{"nf_sheet"}
+    \caption{News Final Sheet}
+    \end{figure}
+    
 In this csv file, each row represents a certain piece of news, with total 93240 rows.\par
-The columns includes 11 features: its IDLink, title, headline, source, topic, publishdate, sentimenttitle, sentimentheadline and the final popularity on different social media platforms.
+
 \item \textbf{times series sheet}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.45]{"ts_sheet"}
+    \caption{Time Series Sheet}
+    \end{figure}
+
 In these csv files, each file includes data for the time series popularity rate for news on a certain social media platform and with certain topics.  
 
 \end{itemize}
 
+
+\newpage
 \section{EDA}
-In this section, we will perform some exploratory data analysis and show the results that we found the most informative for our model. We will go through three important findings during EDA.
+In this section, we perform exploratory data analysis and show the results that we found the most informative.
 
 \subsection{Popularity v.s. Topics}
  
@@ -66,7 +81,7 @@ In this section, we will perform some exploratory data analysis and show the res
 \caption{Count of news by publish time}
 \end{figure}
 
-The above figure shows a barplot of the number of news published on Facebook during November 2015 and July 2016, grouped by its respective topic. The data seems quite balanced here.
+Above is a barplot of the number of news published on Facebook during November 2015 and July 2016, grouped by its respective topic. The data seems quite balanced here.
 
 \begin{figure}[H]
 \centering
@@ -74,7 +89,7 @@ The above figure shows a barplot of the number of news published on Facebook dur
 \caption{Count of popular news by publish time}
 \end{figure}
 
-The above figure shows the same barplot but focuses on only those news with a total popularity rate greater than 100. We may find out from the plot that topics related with Obama is quite popular during 2015 and 2016, which indicates that we are having an unbalanced data set.
+Above is the same barplot but focuses on only those news with a total popularity rate greater than 100. We may find out from the plot that topics related with Obama is quite popular during 2015 and 2016, which indicates that we are having an unbalanced data set.
 
 \begin{figure}[H]
 \centering
@@ -82,7 +97,7 @@ The above figure shows the same barplot but focuses on only those news with a to
 \caption{Box plot for popularity of hot news}
 \end{figure}
 
-The boxplot above shows similar results about the unbalance characteristic of our dataset.
+The boxplot shows similar results about the unbalance characteristic.
 
  
 \subsection{Popularity Trend}
@@ -93,7 +108,7 @@ The boxplot above shows similar results about the unbalance characteristic of ou
 \caption{Violin plot of popularity rate}
 \end{figure}
 
-The violin plot gives the trend of popularity rate ratio for each piece of news during the first two days after its publishment. We could observe that the piece of news reaches an average 30\% of its total popularity in the first 20 minutes after publishment, consistent with the intuition that the news is most popular when it is first published while quickly lose popularity as time goes on.
+The violin plot gives the trend of popularity rate ratio for a piece of news during the first two days after its publishment. We could observe that the piece of news reaches an average 30\% of its total popularity in the first 20 minutes after publishment, consistent with the intuition that the news is most popular when it is first published while quickly lose popularity as time goes on.
 
 \begin{figure}[H]
     \centering
@@ -112,25 +127,24 @@ The violin plots above shows the popularity trend for news with different topics
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{"popu distrib 20m"}
-\caption{Violin plot of popularity rate}
+\caption{Histogram of Popularity Distribution by Topic Popularity (20m)}
 \end{figure}
 
-The figure above shows a histogram of the density distribution of the popularity of news grouped by lower/ higher past (within 20 minutes) topic popularity. We can observe that when the corresponding topic is not popular, the news is very likely to be unpopular. However, the most popular news always appears where the topic is not popular. 
+We can observe that when the corresponding topic is not popular, the news is very likely to be unpopular. However, the most popular news always appears where the topic is not popular. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{"Popularity distrib 1h"}
-\caption{Violin plot of popularity rate}
+\caption{Histogram of Popularity Distribution by Topic Popularity (1h)}
 \end{figure}
 
 To dig into the embedding reasoning for the scenario, we looked back into a longer period (1 hour) to check. The figure above shows that when we look back into a longer period, the most popular news still lies where the topic is not popular, but the news is not necessarily likely to be unpopular when the topic is not popular. We may make a bold conjecture that facebook is holding an imperfect recommendation system, and the news has not yet been exposed to users when the topic is not hot enough. 
-
+\newpage
 \section{Methods}
-In this section, we will go through the process of data preprocessing and give an overall description of the ML methods we performed as well as the parameter selection.
 \subsection{Data Preprocessing}
-In this section, we will go through the data preprocessing part.
+
 \subsubsection{Missing Data}
-Before merging the five raw dataframes we have, we would like to check the missing values. We have a missing rate of approximately 0.3\% and the MCAR test gives a result of 1.0. Thus we could just drop those rows with missing values.
+Before merging the five raw dataframes, we would like to check the missing values. We have a missing rate of approximately 0.3\% and the MCAR test gives a result of 1.0. Thus we drop the rows with missing values.
 \subsubsection{Basic Calculation}
 To get more informative features for the model, we conducted some basic calculations for the change rate of popularity and the corresponding topic popularity, and then merge the dataframes.\par
 The resulting dataframe has 37 columns.
@@ -148,12 +162,12 @@ We applied logarithm on the continuous features before scaling since we have ext
 \end{itemize}
 
 \subsubsection{Final DataFrame}
-The merged dataframe is a 121049 * 40 matrix, having 40 columns including 39 features and 1 target variable.\par
+The merged dataframe is a 121049 * 40 matrix.\par
 Additionally, as is mentioned by Nuno Moniz and Luis Torgo [2], when making predictions, we shall actually focus more on those data with a higher popularity rate. Thus, we have selected those rows with a target popularity greater than e05 for our model. The final dataframe is a 3412 * 40 matrix.
 
 \subsection{ML Methods Overview}
 \subsubsection{ML models and parameters}
-We will first split the data into training (80\%) and testing (20\%), and then we will use kfold to conduct grid search for the best parameters. We have set the number of folds to be 5 here. Also, we have randomly set the random states for train\_test splitting for 5 times, going from 42 to 210 stepped by 42. We will measure the uncertainty caused by data splitting later.
+We will first split the data into training (80\%) and testing (20\%), and then we will use kfold to conduct grid search for the best parameters. We have set the number of folds to be 5 here. Also, we have randomly set the random states for train\_test splitting for 10 times, going from 42 to 420 stepped by 42. We will measure the uncertainty caused by data splitting later.
 \subsubsection{Evaluation Metrics}
 We will use mean square error on the cross validation data to search for the best parameters since we are dealing with a regression problem. And then we calculate both the mean square error and the R square score on the test data to better evaluate the model outcome.
 
@@ -195,10 +209,10 @@ In [1, 10, 100, 1000].
 In [0.01, 0.1, 1.0, 10.0].
 \end{itemize}
 
-
+\newpage
 \section{Results}
 \subsection{Baseline Scores}
-We calculate the R2 score of the models to compare with baseline models.
+We calculate the R2 score of the models to compare with baseline models. The baseline score of R2 is 0, indicating that the model explains none of the variability of the response data around its mean.
 \subsection{Parameters, Scores and Feature Importances}
 In this section, we will discuss the best parameters of the models, the scores and feature importances.
 \subsubsection{Random Forest Regressor}
@@ -212,11 +226,11 @@ In this section, we will discuss the best parameters of the models, the scores a
 \caption{RF Parameter GridSearch}
 \end{figure}
 
-The figure above shows the performance of the random forest model under multiple random splitting. We may observe that a max\_depth of 10 and a min\_samples\_split of 0.025 is pretty reasonable for the model. 
+We may observe that a max\_depth of 10 and a min\_samples\_split of 0.025 is pretty reasonable for the model. 
 \item \textbf{Uncertainty by splitting}\\
-We have an average MSE of 0.36 (with standard deviation 0.02) and an average R2 score of 0.46 (with standard deviation 0.02). The uncertainty comes from data splitting.
+We have an average MSE of 0.36 (with standard deviation 0.02) and an average R2 score of 0.46 (with standard deviation 0.02, greater than baseline). The uncertainty comes from data splitting.
 \item \textbf{Uncertainty by random state}\\
-Fix the parameters to be the best ones (max\_depth = 10, min\_samples\_split = 0.025). And then run the model 5 times to estimate the uncertainty by random state of the random forest model. 
+Fix the parameters to be the best ones (max\_depth = 10, min\_samples\_split = 0.025). Run the model 5 times to estimate the uncertainty by random state. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{"rf_rs_unc"}
@@ -247,7 +261,7 @@ The figure above shows the permutaion importances for the most important feature
 
 We may observe that a max\_depth of 6 and a min\_samples\_split of 0.1 is pretty reasonable for the model. 
 \item \textbf{Uncertainty by splitting}\\
-We have an average MSE of 0.37 (with standard deviation 0.02) and an average R2 score of 0.45 (with standard deviation 0.02). 
+We have an average MSE of 0.37 (with standard deviation 0.02) and an average R2 score of 0.45 (with standard deviation 0.02, greater than baseline). 
 
 \item \textbf{Uncertainty by random state}\\
 Fix the parameters to be the best ones (max\_depth = 6, min\_samples\_split = 0.1). And then run the model 5 times to estimate the uncertainty by random state of the gradient boosting model. 
@@ -263,7 +277,7 @@ The uncertainty caused by the random state of the model is actually pretty low.
 \includegraphics[scale=0.5]{"gbr_perm_imp"}
 \caption{GBR Permutation Feature Importances}
 \end{figure}
-The figure above shows the permutaion importances for the most important features among all. We could observe that the popularity history, topic polularity and publish time of the news is important for prediction.
+We could observe that the popularity history, topic polularity and publish time of the news is important for prediction.
 \end{itemize}
 
 
@@ -280,20 +294,20 @@ The figure above shows the permutaion importances for the most important feature
 \end{figure}
 We may observe that a C of 10 and a gamma of 0.1 is pretty reasonable for the model. 
 \item \textbf{Uncertainty by splitting}\\
-We have an average MSE of 0.4 (with standard deviation 0.03) and an average R2 score of 0.41 (with standard deviation 0.03). The uncertainty comes from data splitting.
+We have an average MSE of 0.4 (with standard deviation 0.03) and an average R2 score of 0.41 (with standard deviation 0.03, greater than baseline). The uncertainty comes from data splitting.
 \item \textbf{Feature importances}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{"svr_perm_imp"}
 \caption{SVR Permutation Feature Importances}
 \end{figure}
-The figure above shows the permutaion importances for the most important features among all. We could observe that the popularity history, publish time and topic of the news is important for prediction.
+We could observe that the popularity history, publish time and topic of the news is important for prediction.
 \end{itemize}
 
 
 \subsection{Model Comparison}
 The outcome of the random forest model is the best of the three, with lower MSE and higher R2 score.
-\subsection{Business Interpretation}
+\subsection{Business and Academic Interpretations}
 
 As is shown in the model outcomes, we could obtain a reasonably low MSE with a comparatively high R2 score performing either the ensenble models or the svr model. The random forest regressor has the best performance amang all three.\par
 The uncertainty of the prediction caused by either data splitting or non-deterministic models is comparatively low, indicating that we will be able to get a stable prediction performance.\par
@@ -303,7 +317,7 @@ The permutation importances of features appears to be different under three mode
 
 The model gives a reasonable outcome but there is still space for improvement.\par
 Our model has 36 features, while a lot of them are closely correlated with each other. To maintain the interpretability of the model, we did not perform dimension reduction in our project. We may try to reduce some columns so as to improve the efficiency of training.\par
-The sentiment features appear to be less informative in our prediction, which is unexpected. We may have perform some pre-calculation for the sentiment features to detect people's attitude toward a topic under certain periods. We may also collect data for the author of the news as extra features.\par
+The sentiment features appear to be less informative in our prediction, which is unexpected. We may have performed some pre-calculation for the sentiment features to detect people's attitude toward a topic under certain periods. We may also collect data for the author of the news as extra features.\par
 The tree based model performs better in our predictions than the support vector one, we may try other methods like neural network to see if it can get even better.
 
 \medskip
